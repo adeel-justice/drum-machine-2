@@ -4,12 +4,12 @@ import Pads from './Drumpad.js';
 
 function App() {
   return (
-    <div className="drum" id="drum-machine">
-      <div id="display" className="drum-display">
+    <div className='drum' id='drum-machine'>
+      <div id='display' className='drum-display'>
         <h1>Display</h1>
       </div>
       <Pads />
-      <div className="footer" id="drum-footer">
+      <div className='footer' id='drum-footer'>
         Made by Adeel Rajwani
       </div>
     </div>
