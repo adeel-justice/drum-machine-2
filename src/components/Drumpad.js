@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+// import src from '*.bmp';
 
 function Pad(props) {
   const classStr = props.isActive === true ? 'is-active' : '';
