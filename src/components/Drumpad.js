@@ -8,8 +8,8 @@ function Pad(props) {
   //let classStr = ''
   // if (props.isActive === true) classStr = 'is-active'
   return (
-    <div className={classStr} id='drum-pad' onClick={props.clickFn}>
-      {props.label}
+    <div className={ classStr } id='drum-pad' onClick={ props.clickFn }>
+      { props.label }
     </div>
   );
 }
@@ -18,9 +18,11 @@ function Pads(props) {
   const [activePadId, setActivePadId] = useState(' ');
 
   const clickQpad = () => {
+    alert('You clicked the Q pad.');
     setActivePadId('Q_PAD');
   };
   const clickWpad = () => {
+    alert('You clicked the W pad.');
     setActivePadId('W_PAD');
   };
   const clickEpad = () => {
@@ -47,15 +49,15 @@ function Pads(props) {
 
   return (
     <div className='drum-pads' id='drum-pads-group'>
-      <Pad label='Q' isActive={activePadId === 'Q_PAD'} clickFn={clickQpad} />
-      <Pad label='W' isActive={activePadId === 'W_PAD'} clickFn={clickWpad} />
-      <Pad label='E' isActive={activePadId === 'E_PAD'} clickFn={clickEpad} />
-      <Pad label='A' isActive={activePadId === 'A_PAD'} clickFn={clickApad} />
-      <Pad label='S' isActive={activePadId === 'S_PAD'} clickFn={clickSpad} />
-      <Pad label='D' isActive={activePadId === 'D_PAD'} clickFn={clickDpad} />
-      <Pad label='Z' isActive={activePadId === 'Z_PAD'} clickFn={clickZpad} />
-      <Pad label='X' isActive={activePadId === 'X_PAD'} clickFn={clickXpad} />
-      <Pad label='C' isActive={activePadId === 'C_PAD'} clickFn={clickCpad} />
+      <Pad label='Q' isActive={ activePadId === 'Q_PAD' } clickFn={ clickQpad } />
+      <Pad label='W' isActive={ activePadId === 'W_PAD' } clickFn={ clickWpad } />
+      <Pad label='E' isActive={ activePadId === 'E_PAD' } clickFn={ clickEpad } />
+      <Pad label='A' isActive={ activePadId === 'A_PAD' } clickFn={ clickApad } />
+      <Pad label='S' isActive={ activePadId === 'S_PAD' } clickFn={ clickSpad } />
+      <Pad label='D' isActive={ activePadId === 'D_PAD' } clickFn={ clickDpad } />
+      <Pad label='Z' isActive={ activePadId === 'Z_PAD' } clickFn={ clickZpad } />
+      <Pad label='X' isActive={ activePadId === 'X_PAD' } clickFn={ clickXpad } />
+      <Pad label='C' isActive={ activePadId === 'C_PAD' } clickFn={ clickCpad } />
     </div>
   );
 }
