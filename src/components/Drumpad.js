@@ -18,33 +18,49 @@ function Pads(props) {
   const [activePadId, setActivePadId] = useState(' ');
 
   const clickQpad = () => {
-    alert('You clicked the Q pad.');
+    var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Chord_1.mp3')
     setActivePadId('Q_PAD');
+    audio.play()
   };
   const clickWpad = () => {
-    alert('You clicked the W pad.');
+    var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Chord_2.mp3')
     setActivePadId('W_PAD');
+    audio.play()
   };
   const clickEpad = () => {
+    var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Chord_3.mp3')
     setActivePadId('E_PAD');
+    audio.play()
   };
   const clickApad = () => {
+    var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Give_us_a_light.mp3')
     setActivePadId('A_PAD');
+    audio.play()
   };
   const clickSpad = () => {
+    var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3')
     setActivePadId('S_PAD');
+    audio.play()
   };
   const clickDpad = () => {
+    var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Bld_H1.mp3')
     setActivePadId('D_PAD');
+    audio.play()
   };
   const clickZpad = () => {
+    var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3')
     setActivePadId('Z_PAD');
+    audio.play()
   };
   const clickXpad = () => {
+    var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3')
     setActivePadId('X_PAD');
+    audio.play()
   };
   const clickCpad = () => {
+    var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3')
     setActivePadId('C_PAD');
+    audio.play()
   };
 
   return (
