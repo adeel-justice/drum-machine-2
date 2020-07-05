@@ -8,7 +8,7 @@ function Pad(props) {
   //let classStr = ''
   // if (props.isActive === true) classStr = 'is-active'
   return (
-    <div className={ classStr } id='drum-pad' onClick={ props.clickFn }>
+    <div className={ classStr } id='drum-pad' onClick={ props.clickFn } >
       { props.label }
     </div>
   );
@@ -18,9 +18,15 @@ function Pads(props) {
   const [activePadId, setActivePadId] = useState(' ');
 
   const clickQpad = () => {
+    // window.addEventListener("keydown", keyCodeQ, false)
+    // function keyCodeQ(key) {
+    //   if (key.keyCode === 81) {
+    //   }
+    // }
     var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Chord_1.mp3')
     setActivePadId('Q_PAD');
     audio.play()
+
   };
   const clickWpad = () => {
     var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Chord_2.mp3')
@@ -62,6 +68,18 @@ function Pads(props) {
     setActivePadId('C_PAD');
     audio.play()
   };
+
+
+  //FIXME: need to find out why this is not clicking with keycode
+  window.addEventListener("keydown", keyCodeQ, false)
+  function keyCodeQ(key) {
+    if (key.keyCode === 81) {
+      var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Chord_1.mp3')
+      setActivePadId('Q_PAD');
+      audio.play()
+    }
+  }
+
 
   return (
     <div className='drum-pads' id='drum-pads-group'>
