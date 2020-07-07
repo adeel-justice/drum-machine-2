@@ -75,7 +75,71 @@ function Pads(props) {
   function keyCodeQ(key) {
     if (key.keyCode === 81) {
       var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Chord_1.mp3')
-      setActivePadId('Q_PAD');
+      audio.play()
+    }
+  }
+
+  window.addEventListener("keydown", keyCodeW, false)
+  function keyCodeW(key) {
+    if (key.keyCode === 87) {
+      var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Chord_2.mp3')
+      audio.play()
+    }
+  }
+
+  window.addEventListener("keydown", keyCodeE, false)
+  function keyCodeE(key) {
+    if (key.keyCode === 69) {
+      var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Chord_3.mp3')
+      audio.play()
+    }
+  }
+
+  window.addEventListener("keydown", keyCodeA, false)
+  function keyCodeA(key) {
+    if (key.keyCode === 65) {
+      var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Give_us_a_light.mp3')
+      audio.play()
+    }
+  }
+
+  window.addEventListener("keydown", keyCodeS, false)
+  function keyCodeS(key) {
+    if (key.keyCode === 83) {
+      var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3')
+      audio.play()
+    }
+  }
+
+  window.addEventListener("keydown", keyCodeD, false)
+  function keyCodeD(key) {
+    if (key.keyCode === 68) {
+      var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Bld_H1.mp3')
+      audio.play()
+    }
+  }
+
+  window.addEventListener("keydown", keyCodeZ, false)
+  function keyCodeZ(key) {
+    if (key.keyCode === 90) {
+      var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3')
+      audio.play()
+    }
+  }
+
+  window.addEventListener("keydown", keyCodeX, false)
+  function keyCodeX(key) {
+    if (key.keyCode === 88) {
+      var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3')
+      audio.play()
+    }
+  }
+
+  window.addEventListener("keydown", keyCodeC, false)
+  function keyCodeC(key) {
+    if (key.keyCode === 67) {
+      var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3')
+      // setActivePadId('C_PAD');
       audio.play()
     }
   }
