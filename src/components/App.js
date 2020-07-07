@@ -10,7 +10,7 @@ function App() {
       </div>
       <Pads />
       <div className='footer' id='drum-footer'>
-        Made by Adeel Rajwani
+        Made by Adeel Rajwani & Keilen Wiley
       </div>
     </div>
   );
