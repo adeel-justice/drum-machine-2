@@ -70,7 +70,7 @@ function Pads(props) {
   };
 
 
-  //FIXME: need to find out why this is not clicking with keycode
+  // Keyboard clicks
   window.addEventListener("keydown", keyCodeQ, false)
   function keyCodeQ(key) {
     if (key.keyCode === 81) {
