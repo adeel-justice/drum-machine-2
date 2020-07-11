@@ -3,7 +3,7 @@ import './App.css';
 
 const Display = ({ displayId }) => {
   return (
-    <h1 id='display'>{ displayId }</h1>
+    <h1 id='display'>{ displayId } </h1>
   )
 }
 

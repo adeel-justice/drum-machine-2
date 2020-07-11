@@ -19,137 +19,73 @@ function Pad(props) {
 function Pads(props) {
   const [activePadId, setActivePadId] = useState('');
   const [displayId, setDisplayId] = useState('Drumpad')
+
+  //Mouse
   const clickQpad = () => {
-    var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Chord_1.mp3')
+    window.DRUM_MACHINE.playSound('CHORD_1')
     setActivePadId('Q_PAD');
     setDisplayId('Chord_1')
-    audio.play()
 
   };
   const clickWpad = () => {
-    var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Chord_2.mp3')
+    window.DRUM_MACHINE.playSound('CHORD_2')
     setActivePadId('W_PAD');
     setDisplayId('Chord_2')
-    audio.play()
+
   };
   const clickEpad = () => {
-    var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Chord_3.mp3')
+    window.DRUM_MACHINE.playSound('CHORD_3')
     setActivePadId('E_PAD');
     setDisplayId('Chord_3')
-    audio.play()
+
   };
   const clickApad = () => {
-    var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Give_us_a_light.mp3')
+    window.DRUM_MACHINE.playSound('SHAKER')
     setActivePadId('A_PAD');
     setDisplayId('Shaker')
-    audio.play()
+
   };
   const clickSpad = () => {
-    var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3')
+    window.DRUM_MACHINE.playSound('OPEN_HH')
     setActivePadId('S_PAD');
     setDisplayId('Open_HH')
-    audio.play()
+
   };
   const clickDpad = () => {
-    var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Bld_H1.mp3')
+    window.DRUM_MACHINE.playSound('CLOSED_HH')
     setActivePadId('D_PAD');
     setDisplayId('Closed_HH')
-    audio.play()
+
   };
   const clickZpad = () => {
-    var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3')
+    window.DRUM_MACHINE.playSound('KICK')
     setActivePadId('Z_PAD');
     setDisplayId('Kick')
-    audio.play()
+
   };
   const clickXpad = () => {
-    var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3')
+    window.DRUM_MACHINE.playSound('SIDE_SHOT')
     setActivePadId('X_PAD');
     setDisplayId('Side-Shot')
-    audio.play()
+
   };
   const clickCpad = () => {
-    var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3')
+    window.DRUM_MACHINE.playSound('SNARE')
     setActivePadId('C_PAD');
     setDisplayId('Snare')
-    audio.play()
+
   };
 
+  // TODO: keyboard clicks moved to index.js example of original below
 
-  // Keyboard clicks
-  window.addEventListener("keydown", keyCodeQ, false)
-  function keyCodeQ(key) {
-    if (key.keyCode === 81) {
-      var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Chord_1.mp3')
-      audio.play()
-    }
-  }
 
-  window.addEventListener("keydown", keyCodeW, false)
-  function keyCodeW(key) {
-    if (key.keyCode === 87) {
-      var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Chord_2.mp3')
-      audio.play()
-    }
-  }
-
-  window.addEventListener("keydown", keyCodeE, false)
-  function keyCodeE(key) {
-    if (key.keyCode === 69) {
-      var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Chord_3.mp3')
-      audio.play()
-    }
-  }
-
-  window.addEventListener("keydown", keyCodeA, false)
-  function keyCodeA(key) {
-    if (key.keyCode === 65) {
-      var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Give_us_a_light.mp3')
-      audio.play()
-    }
-  }
-
-  window.addEventListener("keydown", keyCodeS, false)
-  function keyCodeS(key) {
-    if (key.keyCode === 83) {
-
-      var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3')
-      audio.play()
-    }
-  }
-
-  window.addEventListener("keydown", keyCodeD, false)
-  function keyCodeD(key) {
-    if (key.keyCode === 68) {
-
-      var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Bld_H1.mp3')
-      audio.play()
-    }
-  }
-
-  window.addEventListener("keydown", keyCodeZ, false)
-  function keyCodeZ(key) {
-    if (key.keyCode === 90) {
-      var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3')
-      audio.play()
-    }
-  }
-
-  window.addEventListener("keydown", keyCodeX, false)
-  function keyCodeX(key) {
-    if (key.keyCode === 88) {
-      var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3')
-      audio.play()
-    }
-  }
-
-  window.addEventListener("keydown", keyCodeC, false)
-  function keyCodeC(key) {
-    if (key.keyCode === 67) {
-      var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3')
-      audio.play()
-    }
-  }
+  // window.addEventListener("keydown", keyCodeQ, false)
+  // function keyCodeQ(key) {
+  //   if (key.keyCode === 81) {
+  //     var audio = new Audio('https://s3.amazonaws.com/freecodecamp/drums/Chord_1.mp3')
+  //     audio.play()
+  //   }
+  // }
 
 
   return (
