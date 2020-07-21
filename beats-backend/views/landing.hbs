@@ -1,0 +1,90 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Big-a-deal-beatz</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.min.css" integrity="sha256-qS+snwBgqr+iFVpBB58C9UCxKFhyL03YHpZfdNUhSEw=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <main class="section">
+    <div class=container>
+      <h1 class="title">Big-a-deal Beatz</h1>
+      <a class="button" href="/users/dashboard">Go back to my Dashboard</a>
+      <hr>
+       <form action="/landing" method="POST">
+          <fieldset>
+            <input type="text" name="name">
+            <input type="submit" value="New Beat name">
+          </fieldset>
+          <p> Example Names: 06/28/2020 beat, SampleBeat, DrumBeat, ThemeBeat...etc</p>
+        </form>
+      <hr> 
+      <ul>
+      {{#if messages.success_msg}}
+      <li>{{messages.success_msg}}</li>
+      {{/if}}
+    </ul> 
+      <div class=content>
+        <p>Beats you have created:</p>
+        <ul>
+          {{#each lists}}
+            <li><a href="/list/{{this.uuid}}">{{this.name}}</a></li>
+          {{/each}}
+        </ul>
+        {{!-- <ul>
+          <% for(var i=0; i < lists.length; i++) { %>
+              <li><a href="/list/<%= i %>"><%= lists[i].name %></a></li>
+          <% } %>
+        </ul> --}}
+
+      </div>
+    </div>
+</main>
+
+<!-- <main class="section">
+    <div class=container>
+        <label>Name:</label>
+        <input type="text" id="name-input">
+        <button id="add-name-btn">Add Name</button>
+
+        <br><br><br>
+        <div>
+           <input placeholder="search by name" id="search-input">
+           <button id="search-btn">Search</button>
+        </div>
+
+        <br><br><br>
+
+        <div class="table container">
+          <table id="table">
+            <thead>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Date Added</th>
+                <th>Delete</th>
+                <th>Edit</th>
+            </thead>
+            <tbody></tbody>
+        </table>
+        </div>
+        
+        <section hidden id="update-row">
+            <label>Name:</label>
+            <input type="text" id="update-name-input">
+            <button id="update-row-btn">Update</button>
+        </section>
+    </div>
+        
+    </main> -->
+
+  <!-- <script src="js/vendor/modernizr-3.11.0.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script> -->
+</body>
+
+</html>

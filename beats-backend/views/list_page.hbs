@@ -1,0 +1,43 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Big-a-deal beatz - {{listName}}</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.min.css" integrity="sha256-qS+snwBgqr+iFVpBB58C9UCxKFhyL03YHpZfdNUhSEw=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <main class="section">
+    <div class=container>
+      <h1 class="title">Big-a-deal Beatz - {{listName}}</h1>
+      <hr>
+      <div class=content>
+        <form action="/list/{{listUUID}}/new-item" method="POST">
+          <fieldset>
+            <input type="text" name="description">
+            <input type="submit" value="Create a Beat">
+          </fieldset>
+        </form>
+        <p>To make a new beat: Press "Create a beat" and then use the Drum Pad </p>
+      <hr>
+        <p>Here are your music samples:</p>
+        <ul>
+          {{#each items}}
+            <li>{{this.description}}   <button type="button">Play</button>  </li>
+          {{/each}}
+        </ul>
+        <p><a href="/landing">Go Back to my Beatz lists</a></p>
+      </div>
+    </div>
+</main>
+
+  <!-- <script src="js/vendor/modernizr-3.11.0.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script> -->
+</body>
+
+</html>

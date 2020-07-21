@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" integrity="sha384-DYrp2zq2MpwpsUD/zg8quiwNIBprEgPFt6ThfU0sQW3OkhWAdrZg6VTMwfbQ7315" crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Home</title>
+  </head>
+  <body>
+    <h1>Welcome to the BEATZ</h1><a href="/">HOME</a>
+    <h4>The one place where you can create and store your own beatz</h4>
+    
+
+    {{!-- <% if (typeof message !== 'undefined' ) { %>
+    <p><%= message %></p>
+    <% } %> --}}
+    {{#if message}}
+    <p>  {{message}}  </p>
+    {{/if}}
+
+    <a class="button button-primary" href="/users/login">Login / Register New Account</a>
+
+    <hr>
+    {{!-- <p><a href="/landing"> Quick View</a></p> --}}
+    
+  {{!-- <figure class="image is-128x128">
+    <img src="{{/public/img/beatzbg.png}}">
+  </figure> --}}
+
+    <img src="beatzbg.png" alt="Text Image" style="height:400px;width:800px;">
+  
+    <h6> Designed by Adeel Rajwani & Keilen Wiley </h6>
+    
+  </body>
+</html>

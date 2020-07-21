@@ -1,0 +1,32 @@
+node_modules
+.env
+
+
+
+<!-- <ul>
+      <% if (typeof errors != 'undefined') { %> <% errors.forEach(error => { %>
+      <li><%= error.message %></li>
+      <% }) %> <% } %>
+    </ul>
+
+    <ul>
+      <% if(messages.success_msg) { %>
+      <li><%= messages.success_msg %></li>
+      <% } %>
+    </ul>
+
+    <ul>
+      <% if (messages.error) { %>
+      <li><%= messages.error %></li>
+      <% } %>
+    </ul> -->
+
+
+    PORT=5000
+USER=user
+PASSWORD=password
+DATABASE=beats_db
+DB_PORT=5432
+HOST=127.0.0.1
+
+
