@@ -27,11 +27,27 @@
         <p>Here are your music samples:</p>
         <ul>
           {{#each items}}
-            <li>{{this.description}}   <button type="button">Play</button>  </li>
+            {{!-- <li>{{this.description}}   <button type="button">Play</button>  </li> --}}
+            <li>
+              {{this.description}}
+              <input type="button" value="PLAY AUDIO" onclick="play()">
+      <audio id="audio" src="http://localhost:3000/Sample_audio1.ogg"></audio>
+            
+            </li>
           {{/each}}
         </ul>
         <p><a href="/landing">Go Back to my Beatz lists</a></p>
       </div>
+
+      <script>
+      function play() {
+        var audio = document.getElementById("audio");
+        audio.play();
+      }
+      </script>
+
+      {{!-- <input type="button" value="PLAY AUDIO" onclick="play()">
+      <audio id="audio" src="http://localhost:3000/Sample_audio2.ogg"></audio> --}}
     </div>
 </main>
 

@@ -3,7 +3,7 @@ const db = require('./db/dbService')
 const validate = require('./db/validate')
 const app = express()
 const { pool } = require('./db/dbConfig')
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 3000
 require('dotenv').config()
 const bcrypt = require('bcrypt')
 // const { connect } = require('http2')
@@ -15,6 +15,7 @@ const passport = require('passport');
 const { uuid } = require('./db/utils')
 const LocalStrategy = require("passport-local").Strategy;
 const InitalizePassport = initialize(passport);
+const path = require('path');
 
 // serve files out of the public directory
 app.use(express.static('public'))
@@ -26,6 +27,8 @@ app.use(express.urlencoded({ extended: true }))
 app.set('view engine', 'hbs')
 
 app.use(express.static('img'));
+
+app.use(express.static('audio'));
 
 app.use (session({
     // Key we want to keep secret which will encrypt all of our information
@@ -42,6 +45,8 @@ app.use(passport.initialize());
 app.use(flash());
 
 app.use(passport.session());
+
+app.use(express.static(path.join(__dirname, 'build')));
 
 //================== USING passportConfig.js  =======================
 function initialize(passport) {
@@ -186,6 +191,10 @@ app.get("/users/dashboard", checkNotAuthenticated, (req, res) => {
 app.get("/users/logout", (req, res) => {
   req.logout();
   res.render("index", { message: "You have logged out successfully" });
+});
+
+app.get('/drumkit', function(req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 app.post("/users/register", async (req, res) => {

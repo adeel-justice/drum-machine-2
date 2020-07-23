@@ -1,68 +1,74 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was designed by the collabarative effort of [Adeel Rajwani](https://github.com/adeel-justice) and [Keilen Wiley](https://github.com/K-Wiley) 
 
-## Available Scripts
+# DRUM KIT 2 - Cornerstone Project (DCFlex-Jan2020)
 
-In the project directory, you can run:
+## Description
+This is a front end and back end app created that is designed to play drum kit <br /> sounds on a letter pad. The back end was created for registered users <br /> login features. When these users login and play key strokes on the drum kit, the <br /> key pad/key strokes are captured and stored in that users profile. <br />
 
-### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## FRONT END
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+The front end of the project was designed with REACT. You can FORK <br />
+or CLONE this repo and run the series of commands in your terminal. <br />
+A build file was created and so there is no need to run npm start. instead <br />
+you can open up the terminal and run the build command indicated below. 
 
-### `npm test`
+### `npm install`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Installs the app dependencies needed to run
 
-### `npm run build`
+### `serve -s build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Runs a ststic version of the React front end portion of this  app in the development <br /> mode. Open [http://localhost:5000](http://localhost:5000) to view it in the browser.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## `Dependencies`
+A list a dependencies used to run the REACT front end are as follows: <br />
+* React package.json dependencies (used in command:  npx create-react app)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<br />
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## BACK END
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+You can run the back end of the project on a different server. It was <br />
+designed with REACT. You can go to the beats-backend folder and <br />
+run the series of commands: <br />
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### `npm install`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Installs the app dependencies needed to run the node.js back end
 
-## Learn More
+### `npm run serve`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Runs the backend serve in the development mode on a NODEMON server.<br />
+Open [http://localhost:5000](http://localhost:5000) to view it in the browser.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## `Dependencies`
+A list a dependencies used to run the back end are as follows: <br />
+* bcrypt
+* cors
+* dotenv
+* express -flash  -session
+* hbs
+* knex
+* mysql
+* passport -local
+* pg
 
-### Code Splitting
+<br />
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## NOTE: SOME APP FEATURES ARE STILL IN DEVELOPMENT
+We are still developing features and components of this app, so it's not yet complete.
+<br /> Below are some of the features that are to come: <br />
 
-### Analyzing the Bundle Size
+Where    | Feature
+-------- | ---------
+Front End | Record Option
+Back End | Key Capture in Create Beat section
+Back End | Personalized Database for registered users
+Front End | Additional Sounds
+<br />
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## COMMENTS & FEEDBACK gladly accepted
+As the project's collaborators, we valued any input, ideas, feedback and or suggestions <br /> offered to help us make this app better. The sole purpose  of this project was to demostrate <br /> or skill level as Jr-Level Software Developers graduating from the Digital Crafts Flex Jan-2020 cohort. <br />
+Please feel free to leave a comment and let us know what you think. Thanks!
